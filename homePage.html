@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    
+    <script src="https://kit.fontawesome.com/5403a5595c.js" crossorigin="anonymous"></script>
+  
+    <!-- Bootstrap icon stylesheet  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <!-- Our Css -->
+    <link rel="stylesheet" href="style.css" />  
+    <title>Spotify-Clone</title>
+
+    <!-- our script -->
+    <script defer src="script.js"></script>
+
+  </head>
+  <body>
+        <!-- Wako -->
+      <div class="container-fluid">
+        <div class="row">
+          <nav class="col-md-3 col-lg-2 d-md-block " id="sidebar">
+            <div class="position-sticky pt-3 side-navigation"> 
+            <div class="spotifyLogo">
+              <a class="nav-link text-secondary" href="#">
+                <img
+                  src="/assets/Spotify_Logo_RGB_White.png"
+                  alt="Spotify logo"
+                />
+              </a>
+            </div>
+            <div class="nav-list">
+              <li><a class="nav-link " href="#"><i class="bi bi-house-door"> </i>Home</a></li>
+              <li><a class="nav-link" href="#"><i class="bi bi-search"></i> Search</a></li>
+              <li><a class="nav-link" href="#"><i class="bi bi-collection"></i> Your Library</a></li>
+            </div>
+            <div id="playlistLikes">
+                <button type="button" class="playlistLikes-item"><a class=" href="#"
+                  ><i class="bi bi-plus-square"></i> Create Playlist</a
+                ></button>
+                <button type="button" class="playlistLikes-item"><a class=" href="#"
+                  ><img src="/assets/likedsidebaricon.jpeg" alt="Liked songs icon">Liked Songs</a
+                ></button>
+              
+              <div class=sidebarDivider></div>
+                <div class="sidebarTracks">
+                  <ul class="sidebar-list-unstyled">
+                    <li>Loading - Olamide ft. Bad Boy Timz </li>
+                    <li>Damages - Tems</li>
+                    <li>Shad'e - Fireboy DML</li>
+                    <li>Party With A Jagaban - Midas the Jagaban</li>
+                    <li>Mandy - Scribz Riley</li>
+                  <li>O2 - Oxlade</li>
+                  <li>Essence - Wizkid ft. Tems</li>
+                  <li>Woman - Rema</li>
+                  <li>For Me - Happi</li>
+                  <li>Airplane Mode - Fireboy DML</li>
+                  <li>Southy Love - Peruzzi ft. Fireboy DML</li>
+                  <li>My Touch - Chop Daily & Eugy</li>
+                  <li>Energy - Skepta & Wizkid</li>
+                  <li>Work To Do - August Alsina</li>
+                  <li>Mama Stay - WSTRN</li>
+                  <li>Back Home - Trey Songz ft. Summer Walker</li>
+                  <li>W - Kofee ft. Gunna</li>
+                  <li>Dimension - JAE5 ft. Skepta & Rema</li>
+                  <li>Your Mines - Yung Bleu ft. Drake</li>
+                  <li>Bare Wit Me - Teyana Taylor</li>
+                </ul>
+                </div>
+            </div>
+            <div class="installApp">
+              <a><i class="bi bi-arrow-down-circle"></i> Install App</a>
+            </div> 
+          </nav>
+        <main class="col-md-9 col-lg-10 " style="margin-left: 238px;height: 100%">
+          <div class="container-fluid mt-3 px-0 px-md-3">
+            <!---------- Navbar-->
+            
+            <div class="row px-2 py-2">
+              
+              <header id="top-navigation-wrapper">
+                <nav  class="top-navigation">
+                  <div class="navigation-arrows">
+                    <div class="angle-arrows-left mr-2"><i class="fas fa-angle-left" style="font: size 10px;"></i></div>
+                    <div class="angle-arrows-right ml-2"><i class="fas fa-angle-right"></i></div>
+                  </div>
+                  <div class="profile-name">
+                    <div class="btn-group">
+                      <button class="btn btn-sm text-white dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user-circle mb-2  " style="font-size: 20px;"></i>
+                        <div style="display: inline-block; max-width: 110px;"><p class="mb-0" style="white-space: nowrap;text-overflow: ellipsis; overflow: hidden; font-size: small; font-weight: 500;">Diego 'Ziba' Banovaz</p></div> 
+                      </button>
+                  </div>                 
+                </nav>
+              </header>
+              
+            </div>
+            <div class="row px-3 mt-5">
+              <h1 class="my-4 top-section-title">Good Morning</h1>
+            </div>
+              <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5">
+                        <div class="col mb-2">
+                          <div class="card d-flex welcome-row">
+                            <div class="welcome-card-image">
+                              <img class="welcome-image" src="/Assets/Burning Jazz-rock Fusion.jpg" alt="">
+                            </div>
+                              <div class="welcome-albums-caption">
+                                <a href="">Burning Jazz-Rock Fusion</a>
+                                <button type="button" class="button play-btn-md"></button>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col mb-2">
+                          <div class="card d-flex welcome-row">
+                            <div class="welcome-card-image">
+                              <img class="welcome-image" src="/Assets/Liked Songs.jpg" alt="">
+                            </div>
+                              <div class="welcome-albums-caption">
+                                <a href="">Liked Songs</a>
+                                
+                                <button type="button" class="button play-btn-md"></button>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col mb-2">
+                          <div class="card d-flex welcome-row">
+                            <div class="welcome-card-image">
+                              <img class="welcome-image" src="/Assets/Metal ballads.jpg" alt="">
+                            </div>
+                              <div class="welcome-albums-caption">
+                                <a href="">Metal Ballads</a>
+                                <button type="button" class="button play-btn-md"></button>
+
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col mb-2">
+                          <div class="card d-flex welcome-row">
+                            <div class="welcome-card-image">
+                              <img class="welcome-image" src="/Assets/Post human survival.jpg" alt="">
+                            </div>
+                              <div class="welcome-albums-caption"><a href="">POST HUMAN: SURVIVAL</a> <button type="button" class="button play-btn-md"></button></div>
+                          </div>
+                        </div>
+                        <div class="col mb-2">
+                          <div class="card d-flex welcome-row">
+                            <div class="welcome-card-image">
+                              <img class="welcome-image" src="/Assets/This is Joe Bonamassa.jpg" alt="">
+                            </div>
+                              <div class="welcome-albums-caption"><a href="">This is Joe Bonamassa</a> <button type="button" class="button play-btn-md"></button></div>
+                          </div>
+                        </div>
+                        <div class="col mb-2">
+                          <div class="card d-flex welcome-row">
+                            <div class="welcome-card-image">
+                              <img class="welcome-image" src="/Assets/This is Midian.jpg" alt="">
+                            </div>
+                              <div class="welcome-albums-caption"><a href="">This is Midian</a><button type="button" class="button play-btn-md"></button> </div>
+                          </div>
+                        </div>
+                        <div class="col mb-2">
+                          <div class="card d-flex welcome-row">
+                            <div class="welcome-card-image">
+                              <img class="welcome-image" src="/Assets/Nymphetamine.jpg" alt="">
+                            </div>
+                              <div class="welcome-albums-caption"><a href="">Nymphetamine</a><button type="button" class="button play-btn-md"></button> </div>
+                          </div>
+                        </div>        
+                        <div class="col mb-2">
+                          <div class="card d-flex welcome-row">
+                            <div class="welcome-card-image">
+                              <img class="welcome-image" src="/Assets/Amo.jpg" alt="">
+                            </div>
+                              <div class="welcome-albums-caption"><a href="">Amo</a><button type="button" class="button play-btn-md"></button> </div>
+                          </div>
+                        </div>
+                        <div class="col mb-2">
+                          <div class="card d-flex welcome-row">
+                            <div class="welcome-card-image">
+                              <img class="welcome-image" src="/Assets/Le bask.jpg" alt="">
+                            </div>
+                              <div class="welcome-albums-caption"><a href="">Le Bask</a><button type="button" class="button play-btn-md"></button> </div>
+                          </div>
+                        </div>
+                        <div class="col mb-2">
+                          <div class="card d-flex welcome-row">
+                            <div class="welcome-card-image">
+                              <img class="welcome-image" src="/Assets/Opeth.jpg" alt="">
+                            </div>
+                              <div class="welcome-albums-caption"><a href="">Opeth</a><button type="button" class="button play-btn-md"></button> </div>
+                          </div>
+                        </div>
+              </div>
+        <!-------------------------------------------Recently Played Row------------------------------->
+        <div class="row px-3 my-4 justify-content-between align-items-end">
+          <div>
+            <h1 class=" top-section-title-secondary">Recently Played</h1>
+          </div>
+          
+          <span class="see-all"><a href="">See all</a> </span>
+        </div>      
+          <div class="row my-3 justify-content-between">
+                          <div class="col-6 col-md-3 col-lg-1 mb-4" style="min-width:14.5rem; max-height:18.5rem"">
+                            <div class="other-card">
+                              <div class="other-card-img">
+                                <img src="/Assets/Burning Jazz-rock Fusion.jpg" alt="...">
+                              </div>
+                              <div class="other-card-body">
+                                <h5 class="other-card-title">Burning Jazz-Rock </h5>
+                                <p class="other-card-text">You'll find fiery, modern, groovy, jazz-Rock...</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-3 col-lg-1 mb-4" style="min-width:14.5rem; max-height:18.5rem">
+                            <div class="other-card">
+                              <div class="other-card-img">
+                                <img src="/Assets/Metal ballads.jpg" alt="...">
+                              </div>
+                              <div class="other-card-body">
+                                <h5 class="other-card-title">Metal ballads </h5>
+                                <p class="other-card-text">A collection of the best metal ballads</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-3 col-lg-1 mb-4" style="min-width:14.5rem; max-height:18.5rem">
+                            <div class="other-card">
+                              <div class="other-card-img">
+                                <img src="/Assets/This is Midian.jpg" alt="...">
+                              </div>
+                              <div class="other-card-body">
+                                <h5 class="other-card-title">Midian</h5>
+                                <p class="other-card-text">Cradle of filth</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-3 col-lg-1 mb-4" style="min-width:14.5rem; max-height:18.5rem">
+                            <div class="other-card">
+                              <div class="other-card-img">
+                                <img src="/Assets/Liked Songs.jpg" alt="...">
+                              </div>
+                              <div class="other-card-body">
+                                <h5 class="other-card-title">Liked Songs</h5>
+                                
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-3 col-lg-1 mb-4" style="min-width:14.5rem; max-height:18.5rem">
+                            <div class="other-card">
+                              <div class="other-card-img">
+                                <img src="/Assets/Le bask.jpg" alt="...">
+                              </div>
+                              <div class="other-card-body">
+                                <h5 class="other-card-title">Le Bask</h5>
+                                <p class="other-card-text">Artist</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-3 col-lg-1 mb-4" style="min-width:14.5rem; max-height:18.5rem">
+                            <div class="other-card">
+                              <div class="other-card-img">
+                                <img src="/Assets/Post human survival.jpg" alt="...">
+                              </div>
+                              <div class="other-card-body">
+                                <h5 class="other-card-title">Post human:survival</h5>
+                                <p class="other-card-text">Bring me the horizon</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-3 col-lg-1 mb-4" style="min-width:14.5rem; max-height:18.5rem">
+                            <div class="other-card">
+                              <div class="other-card-img">
+                                <img src="/Assets/This is Joe Bonamassa.jpg" alt="...">
+                              </div>
+                              <div class="other-card-body">
+                                <h5 class="other-card-title">This is Joe Bonamassa</h5>
+                                <p class="other-card-text">This is Joe Bonammasa. The essential tracks..</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-3 col-lg-1 mb-4" style="min-width:14.5rem; max-height:18.5rem">
+                            <div class="other-card">
+                              <div class="other-card-img">
+                                <img src="/Assets/Nymphetamine.jpg" alt="...">
+                              </div>
+                              <div class="other-card-body">
+                                <h5 class="other-card-title">Nymphetamine</h5>
+                                <p class="other-card-text">Cradle of Filth</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          
+          </div>
+
+<!--------------------Shows to try Row------------------------------------------------>
+<div class="row px-3 justify-content-between align-items-end">
+  <div>
+    <h1 class="top-section-title-secondary">Shows to try</h1>
+    <p >Podcasts we think you'll get hooked on</p>
+  </div>
+
+  <span class="see-all"><a href="">See all</a> </span>
+</div>      
+  <div class="row my-3">
+                  <div class="col-6 col-md-3 col-lg-1 mb-4" style="min-width:14.5rem; max-height:18.5rem">
+                    <div class="other-card">
+                      <div class="other-card-img">
+                        <img src="/Assets/Burning Jazz-rock Fusion.jpg" alt="...">
+                      </div>
+                      <div class="other-card-body">
+                        <h5 class="other-card-title">Burning Jazz-Rock </h5>
+                        <p class="other-card-text">You'll find fiery, modern, groovy, jazz-Rock...</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3 col-lg-1 mb-4" style="min-width:14.5rem; max-height:18.5rem">
+                    <div class="other-card">
+                      <div class="other-card-img">
+                        <img src="/Assets/Metal ballads.jpg" alt="...">
+                      </div>
+                      <div class="other-card-body">
+                        <h5 class="other-card-title">Metal ballads </h5>
+                        <p class="other-card-text">A collection of the best metal ballads</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3 col-lg-1 mb-4" style="min-width:14.5rem; max-height:18.5rem">
+                    <div class="other-card">
+                      <div class="other-card-img">
+                        <img src="/Assets/This is Midian.jpg" alt="...">
+                      </div>
+                      <div class="other-card-body">
+                        <h5 class="other-card-title">Midian</h5>
+                        <p class="other-card-text">Cradle of filth</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3 col-lg-1 mb-4" style="min-width:14.5rem; max-height:18.5rem">
+                    <div class="other-card">
+                      <div class="other-card-img">
+                        <img src="/Assets/Liked Songs.jpg" alt="...">
+                      </div>
+                      <div class="other-card-body">
+                        <h5 class="other-card-title">Liked Songs</h5>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3 col-lg-1 mb-4" style="min-width:14.5rem; max-height:18.5rem">
+                    <div class="other-card">
+                      <div class="other-card-img">
+                        <img src="/Assets/Le bask.jpg" alt="...">
+                      </div>
+                      <div class="other-card-body">
+                        <h5 class="other-card-title">Le Bask</h5>
+                        <p class="other-card-text">Artist</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3 col-lg-1 mb-4" style="min-width:14.5rem; max-height:18.5rem">
+                    <div class="other-card">
+                      <div class="other-card-img">
+                        <img src="/Assets/Post human survival.jpg" alt="...">
+                      </div>
+                      <div class="other-card-body">
+                        <h5 class="other-card-title">Post human:survival</h5>
+                        <p class="other-card-text">Bring me the horizon</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3 col-lg-1 mb-4" style="min-width:14.5rem; max-height:18.5rem">
+                    <div class="other-card">
+                      <div class="other-card-img">
+                        <img src="/Assets/This is Joe Bonamassa.jpg" alt="...">
+                      </div>
+                      <div class="other-card-body">
+                        <h5 class="other-card-title">This is Joe Bonamassa</h5>
+                        <p class="other-card-text">This is Joe Bonammasa. The essential tracks..</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-3 col-lg-1 mb-4" style="min-width:14.5rem; max-height:18.5rem">
+                    <div class="other-card">
+                      <div class="other-card-img">
+                        <img src="/Assets/Nymphetamine.jpg" alt="...">
+                      </div>
+                      <div class="other-card-body">
+                        <h5 class="other-card-title">Nymphetamine</h5>
+                        <p class="other-card-text">Cradle of Filth</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  
+  </div>  
+        </main>  
+      </div>
+        </div>
+      
+
+
+                  
+
+
+
+ 
+      <footer>
+        <!-- Justas -->
+        <div class="container-fluid spotify-footer">
+          <div
+            id="footer-left"
+            class="d-flex justify-content-start align-items-center"
+          >
+            <div class="album-cover-image">
+              <img
+                class="img-fluid"
+                src="/assets/footer/albumCover.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class="card-body text-white d-flex flex-column text-nowrap">
+              <a href="#" class="footer-card-title h6 mb-0 song-title"
+                >Torna a casa</a
+              >
+              <span> <a href="#" class="song-author">Måneskin</a></span>
+            </div>
+            <div class="card-icons text-white ml-2">
+              <button type="button" class="save-btn">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div id="footer-middle">
+            <div
+              id="footer-middle-top"
+              class="d-flex justify-content-center align-items-center"
+            >
+              <button class="btn-footer btn-footer-shuffle">
+                <i class="fas fa-random"></i>
+              </button>
+              <button class="btn-footer">
+                <i class="fas fa-step-backward"></i>
+              </button>
+              <button class="btn-footer btn-footer-play">
+                <!-- <i class="fas fa-pause-circle"></i> -->
+                <i class="fas fa-play-circle" style="font-size: 2rem"></i>
+              </button>
+              <button class="btn-footer">
+                <i class="fas fa-step-forward"></i>
+              </button>
+              <button class="btn-footer btn-footer-repeat">
+                <i class="fas fa-redo"></i>
+              </button>
+            </div>
+            <div id="footer-middle-bottom">
+              <span class="mx-2 curent-time"></span>
+              <div class="progress playback-progress-container">
+                <input
+                  class="playback-time"
+                  type="range"
+                  value="1"
+                  min="0"
+                  max="100"
+                  
+                />
+                <!-- <button class="volume-bar-slider"></button> -->
+              </div>
+
+              <span class="mx-2 total-time">3:34</span>
+            </div>
+          </div>
+          <div
+            id="footer-right"
+            class="d-flex justify-content-center align-items-center"
+          >
+            <button class="btn-footer btn-footer-small btn-queue">
+              <i class="fas fa-th-list"></i>
+            </button>
+            <button class="btn-footer btn-footer-small">
+              <i class="fas fa-plug"></i>
+            </button>
+            <button class="btn-footer btn-volume">
+              <i class="fas fa-volume-up"></i>
+            </button>
+            <div class="progress volume-bar">
+              <div
+                class="progress-bar footer-progress-bar"
+                role="progressbar"
+                style="width: 75%"
+                aria-valuenow="10"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+            <button class="volume-bar-slider"></button>
+            <button class="btn-footer btn-footer-small">
+              <i class="fas fa-expand-alt"></i>
+            </button>
+          </div>
+        </div>
+      </footer>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+
+
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
