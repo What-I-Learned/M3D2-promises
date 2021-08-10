@@ -109,18 +109,10 @@
           <div id="album-page">
           <div class="card border-0 text-white artist-card ">
             <div class="artist-coverImg">
-              <img src="/assets/queen.jpg" class="card-img" alt="..." />
             </div>
             
             <div class="artist-card-body">
-              <span
-                ><i class="fas fa-certificate" style="font-size: 14px"></i>
-                <p>Verified Artist</p></span
-              >
-              <h1 class="album-card-title">Queen</h1>
-              <p class="album-card-text m-0">
-                <span>37,120,733</span> montly listeners
-              </p>
+              
             </div>
           </div>
           <div id="artist-page-bottom" class="">
@@ -412,7 +404,7 @@
         </main>
         <footer>
           <!-- Justas -->
-          <div id="spotify-footer" class="container-fluid">
+          <div class="container-fluid spotify-footer">
             <div
               id="footer-left"
               class="d-flex justify-content-start align-items-center"
@@ -449,6 +441,7 @@
                   <i class="fas fa-step-backward"></i>
                 </button>
                 <button class="btn-footer btn-footer-play">
+                  <!-- <i class="fas fa-pause-circle"></i> -->
                   <i class="fas fa-play-circle" style="font-size: 2rem"></i>
                 </button>
                 <button class="btn-footer">
@@ -459,20 +452,20 @@
                 </button>
               </div>
               <div id="footer-middle-bottom">
-                <span class="mx-2">0:12</span>
+                <span class="mx-2 curent-time"></span>
                 <div class="progress playback-progress-container">
                   <input
                     class="playback-time"
                     type="range"
+                    value="1"
                     min="0"
-                    max="100%"
-                    value="40"
-                    style="background-size: 30% 100%"
+                    max="100"
+                    
                   />
-                  <button class="volume-bar-slider"></button>
+                  <!-- <button class="volume-bar-slider"></button> -->
                 </div>
   
-                <span class="mx-2">3:34</span>
+                <span class="mx-2 total-time">3:34</span>
               </div>
             </div>
             <div
@@ -493,7 +486,7 @@
                   class="progress-bar footer-progress-bar"
                   role="progressbar"
                   style="width: 75%"
-                  aria-valuenow="25"
+                  aria-valuenow="10"
                   aria-valuemin="0"
                   aria-valuemax="100"
                 ></div>
@@ -518,6 +511,7 @@
       integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
       crossorigin="anonymous"
     ></script>
+    <script src="script.js"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
