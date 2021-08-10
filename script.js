@@ -15,7 +15,6 @@ function getArtist() {
     .then((artistData) => {
       displayArtist(artistData);
       console.log(artistData);
-      getTopTracks(artistData.tracklist);
     })
     .catch((err) => {
       console.error(err);
@@ -23,8 +22,24 @@ function getArtist() {
   console.log("artist loading");
 }
 
-function getTopTracks(url) {
-  fetch(url, {
+let top10TrackIds = [
+  "1109731",
+  "1109737",
+  "72160317",
+  "854914322",
+  "1109739",
+  "548348732",
+  "6461440",
+  "916445",
+];
+let top10Tracks = [];
+
+top10TrackIds.forEach((id) => {
+  top10Tracks.push(fetchTrack(id));
+});
+
+function fetchTrack(id) {
+  fetch(`https://deezerdevs-deezer.p.rapidapi.com/track/${id}`, {
     method: "GET",
     headers: {
       "x-rapidapi-key": "9835f40629mshe9f0744f8b07fe0p13e171jsn785e2f64657a",
@@ -32,13 +47,30 @@ function getTopTracks(url) {
     },
   })
     .then((response) => response.json())
-    .then((topTracksData) => {
-      console.log(topTracksData);
+    .then((trackData) => {
+      console.log(trackData);
     })
     .catch((err) => {
       console.error(err);
     });
 }
+
+// function getTopTracks(url) {
+//   fetch(url, {
+//     method: "GET",
+//     headers: {
+//       "x-rapidapi-key": "9835f40629mshe9f0744f8b07fe0p13e171jsn785e2f64657a",
+//       "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+//     },
+//   })
+//     .then((response) => response.json())
+//     .then((topTracksData) => {
+//       console.log(topTracksData);
+//     })
+//     .catch((err) => {
+//       console.error(err);
+//     });
+// }
 
 function displayArtist(artist) {
   let artistPage = document.querySelector(".artist-card-body");
