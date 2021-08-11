@@ -32,11 +32,12 @@ let top10TrackIds = [
   "6461440",
   "916445",
 ];
-let top10Tracks = [];
 
-top10TrackIds.forEach((id) => {
-  top10Tracks.push(fetchTrack(id));
-});
+function addTracks() {
+  top10TrackIds.forEach((id) => {
+    fetchTrack(id);
+  });
+}
 
 function fetchTrack(id) {
   fetch(`https://deezerdevs-deezer.p.rapidapi.com/track/${id}`, {
@@ -48,6 +49,7 @@ function fetchTrack(id) {
   })
     .then((response) => response.json())
     .then((trackData) => {
+      displayTrack(trackData);
       console.log(trackData);
     })
     .catch((err) => {
@@ -72,6 +74,60 @@ function fetchTrack(id) {
 //     });
 // }
 
+function displayTrack(track) {
+  let trackContainer = document.createElement("div");
+  trackContainer.classList.add("row", "track-row");
+
+  let tracksContainer = document.querySelector(".tracks");
+
+  console.log(tracksContainer.childNodes["1"]);
+
+  trackContainer.innerHTML += `<div
+    class="
+      track-info-left
+      d-flex
+      align-items-center
+      justify-content-start
+    "
+  >
+    <span class="track-number">1</span>
+    <div class="track-img">
+      <img src=${track.album.cover} alt="" />
+    </div>
+    <h5 class="track-title text-nowrap">${track.title}</h5>
+  </div>
+  <div class="track-info-middle track-listeners">
+    <span>${track.rank}</span>
+  </div>
+  <div
+    class="
+      track-info-right track-length
+      d-flex
+      align-items-center
+      justify-content-start
+    "
+  >
+    <button class="track-like">
+      <i class="far fa-heart"></i>
+    </button>
+    <span>${secondsToMinutes(track.duration)}</span>
+    <button class="track-more">
+      <svg
+        role="img"
+        height="16"
+        width="16"
+        viewBox="0 0 32 32"
+        class="Svg-sc-1bi12j5-0 fIDrcz"
+      >
+        <path
+          d="M5.998 13.999A2 2 0 105.999 18a2 2 0 00-.001-4zm10.001 0A2 2 0 1016 18a2 2 0 000-4zm10.001 0A2 2 0 1026.001 18 2 2 0 0026 14z"
+        ></path>
+      </svg>
+    </button>
+  </div>`;
+  tracksContainer.append(trackContainer);
+}
+
 function displayArtist(artist) {
   let artistPage = document.querySelector(".artist-card-body");
   let artistImage = document.querySelector(".artist-coverImg");
@@ -88,6 +144,13 @@ function displayArtist(artist) {
   <span>${artist.nb_fan}</span> montly listeners
 </p>
           `;
+}
+
+function secondsToMinutes(seconds) {
+  let minutes = Math.floor(seconds / 60);
+  let _seconds = Math.floor(seconds - minutes * 60);
+  let timeStr = `${minutes}:${_seconds}`;
+  return timeStr;
 }
 
 playBtn.addEventListener("click", function () {
@@ -123,4 +186,5 @@ window.onload = function (event) {
   playbackTime.setAttribute("value", "0");
   console.log("page is fully loaded", event.curr);
   getArtist();
+  addTracks();
 };

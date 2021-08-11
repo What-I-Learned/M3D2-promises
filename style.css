@@ -312,7 +312,11 @@ button.more-btn-big:hover {
 }
 .track-title {
   color: #fff;
-  padding-right: 8px;
+  font-size: 1.2rem;
+  width: 12rem;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .track-listeners,
 .track-length {
@@ -703,10 +707,6 @@ button.track-more {
 .track-img > img {
   height: 40px;
   width: 40px;
-}
-.track-title {
-  color: #fff;
-  padding-right: 8px;
 }
 .track-listeners,
 .track-length {
