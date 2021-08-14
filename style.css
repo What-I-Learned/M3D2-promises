@@ -97,15 +97,44 @@ body {
   margin-bottom: 0;
   color: #b3b3b3;
 }
-.artist-coverImg {
+.artist-card,
+.album-card {
+  position: relative;
+  top: 0;
+}
+.album-card {
   height: 30vh;
   max-height: 500px;
   min-height: 340px;
-  overflow: hidden;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  border-radius: 0px !important;
+  padding: 24px;
 }
-.artist-card {
-  position: absolute;
-  top: 0;
+.album-coverImg {
+  margin-right: 24px;
+  height: 192px;
+  width: 192px;
+  overflow: hidden;
+  align-self: flex-end;
+  box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+}
+.album-coverImg img {
+  width: auto;
+  height: 100%;
+  background-size: cover;
+}
+.album-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.album-detail {
+  margin-right: 4px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
 }
 .artist-card-body {
   position: absolute;
@@ -113,6 +142,26 @@ body {
   right: 0;
   left: 0;
   padding: 2rem;
+}
+.album-card-body {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+}
+.album-header {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+.album-title {
+  padding: 0.08em 0px;
+  margin-bottom: 0px;
+  font-size: 48px;
+  line-height: 48px;
+  visibility: visible;
+  width: 100%;
+  font-weight: 700;
 }
 .card-img {
   max-width: 100%;
@@ -238,8 +287,33 @@ button.more-btn-big:hover {
   line-height: 28px;
   margin-bottom: 20px;
 }
+.album-list-top {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  display: grid;
+  grid-template-columns: [index] 16px [first] 4fr [last] minmax(120px, 1fr);
+  grid-gap: 16px;
+  padding: 0 16px;
+}
+.album-list-top span:first-of-type {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.album-list-top span {
+  color: #b3b3b3;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.08rem;
+}
+.track-details {
+  display: grid;
+  grid-template-columns: [index] 16px [first] 4fr [last] minmax(120px, 1fr);
+  grid-gap: 16px;
+  padding: 4px 16px;
+}
 .tracks {
   padding: 0 0.08rem;
+  display: block;
 }
 .track-row {
   padding: 0 1rem;
@@ -270,7 +344,7 @@ button.more-btn-big:hover {
 .track-row:hover .track-number::before {
   visibility: visible;
 }
-.track-row:hover .track-listeners {
+.track-row:hover .track-album {
   color: #fff;
 }
 .track-number {
@@ -293,7 +367,7 @@ button.more-btn-big:hover {
   visibility: hidden;
 }
 .track-number,
-.track-listeners,
+.track-album,
 .track-length {
   color: #b3b3b3;
   display: inline-block;
@@ -312,13 +386,13 @@ button.more-btn-big:hover {
 }
 .track-title {
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1rem;
   width: 12rem;
   display: inline-block;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.track-listeners,
+.track-album,
 .track-length {
   font-size: 14px;
   text-align: right;
@@ -668,7 +742,7 @@ button.track-more {
 .track-row:hover .track-number::before {
   visibility: visible;
 }
-.track-row:hover .track-listeners {
+.track-row:hover .track-album {
   color: #fff;
 }
 .track-number {
@@ -691,7 +765,7 @@ button.track-more {
   visibility: hidden;
 }
 .track-number,
-.track-listeners,
+.track-album,
 .track-length {
   color: #b3b3b3;
   display: inline-block;
@@ -708,14 +782,17 @@ button.track-more {
   height: 40px;
   width: 40px;
 }
-.track-listeners,
+.track-album,
 .track-length {
   font-size: 14px;
-  text-align: right;
+  text-align: left;
   line-height: 16px;
   font-weight: 400;
-  width: 2rem;
+  width: 9rem;
   margin-right: 0;
+}
+.track-album a {
+  color: inherit;
 }
 .track-length span {
   margin-right: 16px;
@@ -1371,4 +1448,25 @@ button.save-btn:focus > i,
   opacity: 0;
   width: 12px;
   z-index: 4;
+}
+.popular-tracks {
+  margin-bottom: 100px;
+}
+.album-tracks {
+  margin-bottom: 100px;
+  width: 100%;
+}
+input.search-input {
+  border-radius: 15px;
+  width: 20rem;
+  border: 1px solid rgba(255, 255, 255, 1);
+  padding: 2px 10px;
+  font-size: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  outline: none;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+input.search-input:focus-visible {
+  outline-offset: 0px;
+  outline: none;
 }

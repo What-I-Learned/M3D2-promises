@@ -107,11 +107,21 @@
             </nav>
           </header>
           <div id="album-page">
-          <div class="card border-0 text-white artist-card ">
-            <div class="artist-coverImg">
-            </div>
+          <div class="text-white album-card" style="background-color: rgb(160,176,192);">
             
-            <div class="artist-card-body">
+            <div class="album-coverImg">
+                <img src="/Assets/album-cover.jpg" class= alt="">
+            </div>
+       
+            <div class="album-card-body">
+                <h2 class="album-header">Album</h2>
+                <h1 class="album-title">Some album name</h1>
+                <div class="album-info">
+                    <span class="album-detail album-artist">Queen</span>
+                    <span class="album-detail album-year">1989</span>
+                    <span class="album-detail album-songs">12 songs</span>
+                    <span class="album-detail album-time">33 min 16 sec</span>
+                </div>
               
             </div>
           </div>
@@ -145,32 +155,14 @@
             </div>
             <div class="artist-popular-content">
               <div class="row px-5">
-                <div class="popular-tracks">
-                  <h2 class="section-title">Popular</h2>
+                <div class="album-tracks">
+                  <div class="section-title album-list-top">
+                    <span>#</span>
+                    <span>title</span>
+                    <span>time</span>
+                  </div>
                   <div class="tracks">
                     
-                    
-                  </div>
-                  <button class="see-more-btn">See more</button>
-                </div>
-                <div class="artist-pick">
-                  <h2 class="section-title">Artist pick</h2>
-                  <div class="artist-pick-container">
-                    <div class="artist-pick-img">
-                      <img src="/assets/album-recomendation.png" alt="" />
-                    </div>
-                    <div class="artist-pick-content">
-                      <div class="artist-pick-post">
-                        <div class="post-img">
-                          <img src="/assets/queenPost.jfif" alt="" />
-                        </div>
-                        <div class="artist-pick-playlist">Posted By Queen</div>
-                      </div>
-                      <div class="artist-pick-title">
-                        <a href="#">Queen Best Of</a>
-                      </div>
-                      <div class="artist-pick-playlist">Playlist</div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -296,5 +288,12 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
     -->
+    <script>
+        window.onload=function(){
+            const query = new URLSearchParams(document.location.search).get("albumId")
+            console.log(query);
+            getAlbum(query)
+        }
+    </script>
   </body>
 </html>
